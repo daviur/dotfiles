@@ -13,7 +13,6 @@ export REFER="$HOME/.referbib"
 export SUDO_ASKPASS="$HOME/.scripts/tools/dmenupass"
 export PIX="$HOME/.pix/"
 export GOPATH="$HOME/go"
-export GPG_TTY=$(tty)
 # less/man colors
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
