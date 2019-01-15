@@ -6,7 +6,7 @@
 
 let mapleader =" "
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
@@ -15,6 +15,7 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Some basics:
+	color peachpuff
 	set nocompatible
 	filetype plugin on
 	syntax on

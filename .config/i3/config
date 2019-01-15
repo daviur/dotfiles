@@ -137,7 +137,7 @@ bindsym $mod+Shift+w		exec --no-startup-id $BROWSER
 bindsym $mod+e			exec $term -e neomutt && pkill -RTMIN+12 i3blocks
 bindsym $mod+Shift+e		exec --no-startup-id tutorialvids
 
-bindsym $mod+r 			exec $term -e ranger
+bindsym $mod+r 			exec $term -e $FILE
 bindsym $mod+Shift+r		exec --no-startup-id winresize
 
 bindsym $mod+t			split toggle
@@ -195,10 +195,10 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 bindsym $mod+x			exec --no-startup-id lockscreen
 bindsym $mod+Shift+x		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
 
-#bindsym $mod+c
+bindsym $mod+c			exec --no-startup-id freealf
 bindsym $mod+Shift+c		exec --no-startup-id camtoggle
 
-#bindsym $mod+v
+bindsym $mod+v			exec --no-startup-id st -e vim -c "VimwikiIndex"
 #bindsym $mod+Shift+v
 
 bindsym $mod+b			bar mode toggle
