@@ -1,22 +1,8 @@
 # vim: filetype=i3
-#  _        _    ____  ____ ____
-# | |      / \  |  _ \| __ ) ___|
-# | |     / _ \ | |_) |  _ \___ \
-# | |___ / ___ \|  _ <| |_) |__) |
-# |_____/_/   \_\_| \_\____/____/
 #
-# File originally by Luke Smith
-# Website: http://lukesmith.xyz
-# Email: luke@lukesmith.xyz
-# YouTube: https://youtube.com/c/LukeSmithxyz
-# Github: https://github.com/LukeSmithxyz
-
 # This config file will use environmental variables such as $BROWSER and $TERMINAL.
 # You can set these variables in ~/.profile or ~/.bash_profile if you have it as below:
 #
-# export FILE="ranger"
-# export TERMINAL="st"
-
 # #---Basic Definitions---# #
 # Needed for i3-gaps
 for_window [class="^.*"] border pixel 2
@@ -80,7 +66,7 @@ set_from_resource $darkwhite	color7  #000000
 set_from_resource $white	color15 #000000
 set $transparent		#00000000
 
-#                       BORDER		BACKGROUND	TEXT		INDICATOR   CHILD_BORDER
+#                       BORDER		BACKGROUND	TEXT		INDICATOR   		CHILD_BORDER
 client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
 client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
 client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
@@ -195,7 +181,6 @@ bindsym $mod+c			exec --no-startup-id freealf
 bindsym $mod+Shift+c		exec --no-startup-id camtoggle
 
 bindsym $mod+v			exec --no-startup-id st -e vim -c "VimwikiIndex"
-#bindsym $mod+Shift+v
 
 bindsym $mod+b			bar mode toggle
 bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id bottomleft
@@ -344,7 +329,7 @@ bindsym XF86PowerOff		exec --no-startup-id prompt "Shutdown computer?" "$shutdow
 ##bindsym XF86Paste		exec
 ##bindsym XF86Cut		exec
 ##bindsym XF86MenuKB		exec
-bindsym XF86Calculator		exec $term -e R -q --no-save
+bindsym XF86Calculator		exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=2
 ##bindsym XF86Sleep		This binding is typically mapped by systemd automatically.
 ##bindsym XF86WakeUp		exec
 bindsym XF86Explorer		exec $term -e $FILE
@@ -369,7 +354,7 @@ bindsym XF86AudioRewind		exec --no-startup-id lmc back 10
 bindsym XF86AudioForward	exec --no-startup-id lmc forward 10
 ##bindsym XF86Phone		exec
 ##bindsym XF86Tools		exec
-bindsym XF86HomePage		exec $BROWSER https://lukesmith.xyz
+bindsym XF86HomePage		exec $BROWSER https://www.davidurbina.net
 bindsym XF86Reload		restart
 ##bindsym XF86ScrollUp		exec
 ##bindsym XF86ScrollDown		exec
