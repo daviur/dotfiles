@@ -46,6 +46,8 @@ exec_always --no-startup-id mpdupdate
 exec --no-startup-id mpd
 # Podboat automatic queue and download
 exec_always --no-startup-id podentr
+# Start Dropbox
+exec --no-startup-id dropbox start
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
