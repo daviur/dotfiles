@@ -27,9 +27,6 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
-# Start graphical server if i3 not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
-
 # Switch escape and caps if tty:
 sudo -n loadkeys ~/.scripts/ttymaps.kmap 2>/dev/null
 
@@ -41,3 +38,5 @@ eval "$(pyenv virtualenv-init -)"
 # SSH agent
 eval "$(ssh-agent -s)"
 
+# Start graphical server if i3 not already running.
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
