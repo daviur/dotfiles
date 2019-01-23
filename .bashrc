@@ -37,6 +37,8 @@ alias x="sxiv -ft *"
 #alias lp="pacman -Qett --color=always | less"
 alias l="ls -l"
 alias ll="ls -al"
+# Needed to handle dotfiles
+alias gitd='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Adding color
 alias ls="ls -hN --color=auto --group-directories-first"
