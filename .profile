@@ -35,8 +35,9 @@ export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# SSH agent
-eval "$(ssh-agent -s)"
+# Init SSH agent and add key
+[ $SSH_AGENT_PID ] && eval "$(ssh-agent -s)"
+ssh-add .ssh/id_rsa > /dev/null 2>&1
 
 # Start graphical server if i3 not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
