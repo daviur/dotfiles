@@ -36,10 +36,10 @@ call plug#end()
 	set splitbelow splitright
 
 " Shortcutting split navigation, saving a keypress:
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
+	map <C-M-left> 	<C-w>h
+	map <C-M-down> 	<C-w>j
+	map <C-M-up> 	<C-w>k
+	map <C-M-right> <C-w>l
 
 " Check file in shellcheck:
 	map <leader>s :!clear && shellcheck %<CR>
