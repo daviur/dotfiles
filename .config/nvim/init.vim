@@ -7,9 +7,14 @@
 let mapleader =" "
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
 Plug 'LukeSmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 call plug#end()
@@ -21,6 +26,8 @@ call plug#end()
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+	let g:deoplete#enable_at_startup = 1
+
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
