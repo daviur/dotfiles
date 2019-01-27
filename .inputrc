@@ -13,3 +13,6 @@ Control-l: clear-screen
 Control-a: beginning-of-line
 
 $endif
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
