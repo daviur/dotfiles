@@ -163,15 +163,19 @@ bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
 
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
+bindsym $mod+Ctrl+h		exec --no-startup-id i3resize left
 
 bindsym $mod+j			focus down
 bindsym $mod+Shift+j		move down 30
+bindsym $mod+Ctrl+j		exec --no-startup-id i3resize down
 
 bindsym $mod+k			focus up
 bindsym $mod+Shift+k		move up 30
+bindsym $mod+Ctrl+k		exec --no-startup-id i3resize up
 
 bindsym $mod+l			focus right
 bindsym $mod+Shift+l		move right 30
+bindsym $mod+Ctrl+l		exec --no-startup-id i3resize right
 
 bindsym $mod+z			gaps outer current plus 5
 bindsym $mod+Shift+z		gaps outer current minus 5
@@ -277,19 +281,6 @@ bindsym $mod+F10	exec --no-startup-id dmenuumount
 bindsym $mod+F11	exec --no-startup-id ducksearch
 bindsym $mod+F12	exec $term -e nmtui
 
-# #---Arrow Keys---# #
-bindsym $mod+Left		focus left
-bindsym $mod+Down		focus down
-bindsym $mod+Up			focus up
-bindsym $mod+Right 		focus right
-bindsym $mod+Shift+Left		move left
-bindsym $mod+Shift+Down		move down
-bindsym $mod+Shift+Up		move up
-bindsym $mod+Shift+Right 	move right
-bindsym $mod+Mod1+Left		exec --no-startup-id i3resize left
-bindsym $mod+Mod1+Down		exec --no-startup-id i3resize down
-bindsym $mod+Mod1+Up		exec --no-startup-id i3resize up
-bindsym $mod+Mod1+Right		exec --no-startup-id i3resize right
 # #---Media Keys---# #
 
 # Volume keys
@@ -320,11 +311,7 @@ bindsym XF86Launch1		exec --no-startup-id xset dpms force off
 # These are the extra media keys that some keyboards have.
 bindsym XF86AudioMute		exec --no-startup-id lmc mute
 bindsym XF86AudioLowerVolume	exec --no-startup-id lmc down 5
-bindsym Shift+XF86AudioLowerVolume	exec --no-startup-id lmc down 10
-bindsym Control+XF86AudioLowerVolume	exec --no-startup-id lmc down 1
 bindsym XF86AudioRaiseVolume	exec --no-startup-id lmc up 5
-bindsym Shift+XF86AudioRaiseVolume	exec --no-startup-id lmc up 10
-bindsym Control+XF86AudioRaiseVolume	exec --no-startup-id lmc up 1
 bindsym XF86PowerOff		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
 ##bindsym XF86Copy		exec
 ##bindsym XF86Open		exec
