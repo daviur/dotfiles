@@ -35,7 +35,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Init SSH agent and add key
-[ $SSH_AGENT_PID ] && eval "$(ssh-agent -s)"
+[ ! $SSH_AGENT_PID ] && eval "$(ssh-agent -s)"
 ssh-add .ssh/id_rsa > /dev/null 2>&1
 
 # Start graphical server if i3 not already running.
