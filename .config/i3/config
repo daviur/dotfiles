@@ -133,7 +133,7 @@ bindsym $mod+Shift+t		split toggle
 
 bindsym $mod+y			exec $term -e calcurse
 
-bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
+#bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
 
 bindsym $mod+i 			exec $term -e htop
 
