@@ -3,8 +3,8 @@
 .SHIFT_LIST 10p
 ..
 .PARA_SPACE 1m
-.TITLE "\s+(10A Friendly Guide to LARBS!\s0"
-.AUTHOR "\s+5Luke Smith\s0"
+.TITLE "\s+(10A Friendly Guide to my rise!\s0"
+.AUTHOR "\s+5David I Urbina\s0"
 .DOCTYPE    DEFAULT
 .COPYSTYLE  FINAL
 .PRINTSTYLE TYPESET
@@ -12,7 +12,7 @@
 .START
 Use vim keys (\f(CWh/j/k/l\fP) to navigate this document.
 Pressing \f(CWs\fP will fit it to window width (\f(CWa\fP to revert).
-\f(CWK\fP and \f(CWJ\fP zoom in and out.
+\f(CWAlt-K\fP and \f(CWAlt-J\fP zoom in and out.
 \f(CWSuper+f\fP to toggle fullscreen.
 \f(CWf\fP will highlight links to follow which are selectable by typing the number that appears plus \f(CWEnter\fP.
 \f(CWq\fP to quit.
