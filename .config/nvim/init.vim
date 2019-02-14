@@ -8,16 +8,19 @@ let mapleader =" "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete-clangx'
+Plug 'Shougo/neco-vim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'jreybert/vimagit'
-Plug 'airblade/vim-gitgutter'
-Plug 'LukeSmithxyz/vimling'
-Plug 'vimwiki/vimwiki'
-Plug 'bling/vim-airline'
+Plug 'jreybert/vimagit' "git manipulation
+" Plug 'airblade/vim-gitgutter' "git manipulation
+" Plug 'LukeSmithxyz/vimling' "enabling deadkeys e.g. 'a
+" Plug 'vimwiki/vimwiki'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
@@ -61,7 +64,7 @@ set clipboard=unnamedplus
 	map <leader>s :!clear && shellcheck %<CR>
 
 " Replace all is aliased to S.
-	nnoremap S :%s//g<Left><Left>
+"	nnoremap S :%s//g<Left><Left>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 	map <leader>c :w! \| !compiler <c-r>%<CR>
@@ -98,6 +101,10 @@ set clipboard=unnamedplus
 	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 	vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 	map <Space><Tab> <Esc>/<++><Enter>"_c4l
+
+" Shortcutting saving and quitting
+	map <C-s> :w<CR>
+	map <C-q> :q!<CR>
 
  "____        _                  _
 "/ ___| _ __ (_)_ __  _ __   ___| |_ ___
