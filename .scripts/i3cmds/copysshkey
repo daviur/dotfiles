@@ -1,0 +1,10 @@
+#!/bin/sh
+# Copy selected SSH public key to primary
+
+allkeys=$(find ~/.ssh -iname "*.pub")
+keysnames=$(find ~/.ssh -iname "*.pub" -exec basename {} \;)
+
+# Get user choise of key
+chosen=$(printf "$allkeys" | dmenu -i -p "Select key to copy:")
+
+xclip -sel clip < $chosen
