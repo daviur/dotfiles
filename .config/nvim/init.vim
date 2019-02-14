@@ -28,6 +28,7 @@ set bg=light
 set mouse=a
 set nohlsearch
 set clipboard=unnamedplus
+
 " Some basics:
 	set nocompatible
 	filetype plugin on
