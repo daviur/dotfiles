@@ -38,5 +38,10 @@ eval "$(pyenv virtualenv-init -)"
 [ ! $SSH_AGENT_PID ] && eval "$(ssh-agent -s)"
 ssh-add .ssh/id_rsa > /dev/null 2>&1
 
+#!/bin/bash
+if [ -f /var/run/reboot-required ]; then
+  echo 'reboot required'
+fi
+
 # Start graphical server if i3 not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
