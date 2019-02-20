@@ -12,15 +12,6 @@ export BIB="$HOME/Documents/LaTeX/uni.bib"
 export SUDO_ASKPASS="$HOME/.scripts/tools/dmenupass"
 export PIX="$HOME/.pix/"
 export GOPATH="$HOME/go"
-# less/man colors
-export LESS=-R
-export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
-export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
-export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
-export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 [ ! -f ~/.shortcuts ] && shortcuts >/dev/null 2>&1
 
@@ -29,16 +20,10 @@ echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc
 # Switch escape and caps if tty:
 sudo -n loadkeys ~/.scripts/ttymaps.kmap 2>/dev/null
 
-# PyEnv
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Init SSH agent and add key
 [ ! $SSH_AGENT_PID ] && eval "$(ssh-agent -s)"
 ssh-add .ssh/id_rsa > /dev/null 2>&1
 
-#!/bin/bash
 if [ -f /var/run/reboot-required ]; then
   echo 'reboot required'
 fi
