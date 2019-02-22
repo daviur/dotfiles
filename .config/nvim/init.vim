@@ -11,8 +11,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete-clangx'
 Plug 'Shougo/neco-vim'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic' 		"Syntax checking hacks
+Plug 'scrooloose/nerdtree'		" File navigator
+Plug 'Xuyuanp/nerdtree-git-plugin'	" Git support for NERDTree
+Plug 'scrooloose/syntastic' 		" Syntax checking hacks
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'tpope/vim-fugitive' 		" Git wrapper
@@ -26,6 +27,7 @@ Plug 'tpope/vim-commentary' 		" Use gcc or gc to comment
 Plug 'tpope/vim-surround' 		" Quoting/parenthesizing made simple
 Plug 'christoomey/vim-tmux-navigator'	" Seamless navigation between tmux panes and vim splits
 Plug 'skywind3000/asyncrun.vim'		"
+Plug 'altercation/vim-colors-solarized'	" Adding solarized colors
 call plug#end()
 
 set bg=light
@@ -40,6 +42,8 @@ set clipboard=unnamedplus
 	set encoding=utf-8
 	set number relativenumber
 	let g:deoplete#enable_at_startup = 1
+	set background=dark
+	colorscheme solarized
 
 " Enable autocompletion:
 	set wildmode=longest,list,full
@@ -59,6 +63,7 @@ set clipboard=unnamedplus
 " Nerd tree
 	map <C-n> :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	let NERDTreeIgnore = ['\.pyc', '\.o', '\.lo']
 
 " Shortcutting split navigation, saving a keypress:
 	" map <C-h> <C-w>h
