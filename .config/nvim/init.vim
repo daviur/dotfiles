@@ -7,27 +7,26 @@
 let mapleader =" "
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete-clangx'
-Plug 'Shougo/neco-vim'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'		" File navigator
-Plug 'Xuyuanp/nerdtree-git-plugin'	" Git support for NERDTree
-Plug 'scrooloose/syntastic' 		" Syntax checking hacks
-Plug 'junegunn/goyo.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'tpope/vim-fugitive' 		" Git wrapper
-" Plug 'jreybert/vimagit' 		" git manipulation
-Plug 'airblade/vim-gitgutter' 		" Show git diff in the gutter
-" Plug 'LukeSmithxyz/vimling' 		" Enabling deadkeys e.g. 'a
-" Plug 'vimwiki/vimwiki'
-Plug 'vim-airline/vim-airline'		" A light status/tabline
-Plug 'vim-airline/vim-airline-themes'	" Themes for vim-airline
-Plug 'tpope/vim-commentary' 		" Use gcc or gc to comment
-Plug 'tpope/vim-surround' 		" Quoting/parenthesizing made simple
-Plug 'christoomey/vim-tmux-navigator'	" Seamless navigation between tmux panes and vim splits
-Plug 'skywind3000/asyncrun.vim'		"
-Plug 'altercation/vim-colors-solarized'	" Adding solarized colors
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'Shougo/deoplete-clangx'
+	Plug 'Shougo/neco-vim'
+	Plug 'scrooloose/nerdtree'		" File navigator
+	Plug 'Xuyuanp/nerdtree-git-plugin'	" Git support for NERDTree
+	Plug 'scrooloose/syntastic' 		" Syntax checking hacks
+	Plug 'junegunn/goyo.vim'
+	Plug 'PotatoesMaster/i3-vim-syntax'
+	Plug 'tpope/vim-fugitive' 		" Git wrapper
+	" Plug 'jreybert/vimagit' 		" git manipulation
+	Plug 'airblade/vim-gitgutter' 		" Show git diff in the gutter
+	" Plug 'LukeSmithxyz/vimling' 		" Enabling deadkeys e.g. 'a
+	" Plug 'vimwiki/vimwiki'
+	Plug 'vim-airline/vim-airline'		" A light status/tabline
+	Plug 'vim-airline/vim-airline-themes'	" Themes for vim-airline
+	Plug 'tpope/vim-commentary' 		" Use gcc or gc to comment
+	Plug 'tpope/vim-surround' 		" Quoting/parenthesizing made simple
+	Plug 'christoomey/vim-tmux-navigator'	" Seamless navigation between tmux panes and vim splits
+	Plug 'skywind3000/asyncrun.vim'
+	Plug 'altercation/vim-colors-solarized'	" Adding solarized colors
 call plug#end()
 
 set bg=light
@@ -64,12 +63,6 @@ set clipboard=unnamedplus
 	map <C-n> :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	let NERDTreeIgnore = ['\.pyc', '\.o', '\.lo']
-
-" Shortcutting split navigation, saving a keypress:
-	" map <C-h> <C-w>h
-	" map <C-j> <C-w>j
-	" map <C-k> <C-w>k
-	" map <C-l> <C-w>l
 
 " Check file in shellcheck:
 	map <leader>s :!clear && shellcheck %<CR>
@@ -116,44 +109,6 @@ set clipboard=unnamedplus
 " Shortcutting saving and quitting
 	map <C-s> :w<CR>
 	map <C-q> :q!<CR>
-
-" Customizations for status/tabline
-" let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.maxlinenr = '㏑'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = 'Ɇ'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" airline symbols
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.linenr = ''
-
-
 
  "____        _                  _
 "/ ___| _ __ (_)_ __  _ __   ___| |_ ___
