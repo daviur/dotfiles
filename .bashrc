@@ -1,11 +1,18 @@
 #!/bin/bash
-stty -ixon # Disable ctrl-s and ctrl-q.
-shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
-HISTSIZE= HISTFILESIZE= # Infinite history.
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-
 # Enable vim mode
 set -o vi
+
+# Disable ctrl-s and ctrl-q
+stty -ixon
+
+# Allows you to cd into directory merely by typing the directory name.
+shopt -s autocd
+
+# Infinite history.
+HISTSIZE= HISTFILESIZE=
+
+# Set prompt
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 # Set GPG agent to tty
 export GPG_TTY=$(tty)
@@ -64,10 +71,15 @@ se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDIT
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
 vf() { fzf | xargs -r -I % $EDITOR % ;}
 
+# Fuzzi File Search
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # PyEnv
 export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Enabling fuzzy File Search
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Check for reboot
+if [ -f /var/run/reboot-required ]; then
+  echo 'reboot required'
+fi
