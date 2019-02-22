@@ -1,4 +1,4 @@
-# Luke's ranger setup
+# David's ranger setup
 
 ## Basic Ranger shortcuts
 
