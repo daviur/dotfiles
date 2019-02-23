@@ -26,7 +26,8 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-surround' 		" Quoting/parenthesizing made simple
 	Plug 'christoomey/vim-tmux-navigator'	" Seamless navigation between tmux panes and vim splits
 	Plug 'skywind3000/asyncrun.vim'
-	Plug 'altercation/vim-colors-solarized'	" Adding solarized colors
+	Plug 'tomasr/molokai'			" Molokai colorscheme
+	Plug 'altercation/vim-colors-solarized'	" Solarized colorscheme
 call plug#end()
 
 set bg=light

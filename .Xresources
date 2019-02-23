@@ -3,8 +3,7 @@
 !! Set a default font and font size as below:
 *.font:  Mono:pixelsize=16
 
-! Solarized color scheme for the X Window System
-
+! Solarized Theme
 ! Common
 
 #define S_yellow        #b58900
@@ -16,7 +15,6 @@
 #define S_cyan          #2aa198
 #define S_green         #859900
 
-
 ! Dark
 
 #define S_base03        #002b36
@@ -27,7 +25,6 @@
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
-
 
 ! Light
 
@@ -70,3 +67,47 @@
 *color13:                 S_violet
 *color14:                 S_base1
 *color15: 		  S_base3
+
+!
+! Molokai Theme
+
+/* *.background:  #121212 */
+/* *.cursorColor: #bbbbbb */
+/* ! */
+/* ! Black */
+/* *.color0:      #121212 */
+/* *.color8:      #555555 */
+/* ! */
+/* ! Red */
+/* *.color1:      #fa2573 */
+/* *.color9:      #f6669d */
+/* ! */
+/* ! Green */
+/* *.color2:      #98e123 */
+/* *.color10:     #b1e05f */
+/* ! */
+/* ! Yellow */
+/* *.color3:      #dfd460 */
+/* *.color11:     #fff26d */
+/* ! */
+/* ! Blue */
+/* *.color4:      #1080d0 */
+/* *.color12:     #00afff */
+/* ! */
+/* ! Magenta */
+/* *.color5:      #8700ff */
+/* *.color13:     #af87ff */
+/* ! */
+/* ! Cyan */
+/* *.color6:      #43a8d0 */
+/* *.color14:     #51ceff */
+/* ! */
+/* ! White */
+/* *.color7:      #bbbbbb */
+/* *.color15:     #ffffff */
+/* ! */
+/* ! Bold, Italic, Underline */
+/* *.colorBD:     #ffffff */
+/* !*.colorIT: */
+/* !*.colorUL: */
+
