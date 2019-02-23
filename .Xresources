@@ -1,7 +1,7 @@
 !! Transparency (0-255):
 *.alpha: 230
 !! Set a default font and font size as below:
-*.font:  Mono:pixelsize=16
+*.font:  Inconsolata-dz:pixelsize=16
 
 ! Solarized Theme
 ! Common
