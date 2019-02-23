@@ -13,8 +13,8 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'scrooloose/nerdtree'		" File navigator
 	Plug 'Xuyuanp/nerdtree-git-plugin'	" Git support for NERDTree
 	Plug 'scrooloose/syntastic' 		" Syntax checking hacks
-	Plug 'junegunn/goyo.vim'
-	Plug 'PotatoesMaster/i3-vim-syntax'
+	Plug 'junegunn/goyo.vim'		" Makes text more readable
+	Plug 'PotatoesMaster/i3-vim-syntax'	" Vim syntax highlighting for i3
 	Plug 'tpope/vim-fugitive' 		" Git wrapper
 	" Plug 'jreybert/vimagit' 		" git manipulation
 	Plug 'airblade/vim-gitgutter' 		" Show git diff in the gutter
@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-commentary' 		" Use gcc or gc to comment
 	Plug 'tpope/vim-surround' 		" Quoting/parenthesizing made simple
 	Plug 'christoomey/vim-tmux-navigator'	" Seamless navigation between tmux panes and vim splits
-	Plug 'skywind3000/asyncrun.vim'
+	Plug 'skywind3000/asyncrun.vim'		" Enable running shell commands in background and get output in real time
 	Plug 'altercation/vim-colors-solarized'	" Solarized colorscheme
 	" Plug 'tomasr/molokai'			" Molokai colorscheme
 call plug#end()
@@ -51,7 +51,7 @@ set clipboard=unnamedplus
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Goyo plugin makes text more readable when writing prose:
+" Goyo
 	map <leader>f :Goyo \| set linebreak<CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
@@ -111,14 +111,14 @@ set clipboard=unnamedplus
 	map <C-s> :w<CR>
 	map <C-q> :q!<CR>
 
-" air-line
+" Air-line
 	let g:airline_powerline_fonts = 1
 
 	if !exists('g:airline_symbols')
 	    let g:airline_symbols = {}
 	endif
 
-" unicode symbols
+" Unicode symbols
 	let g:airline_left_sep = '»'
 	let g:airline_left_sep = '▶'
 	let g:airline_right_sep = '«'
@@ -132,7 +132,7 @@ set clipboard=unnamedplus
 	let g:airline_symbols.paste = '∥'
 	let g:airline_symbols.whitespace = 'Ξ'
 
-" airline symbols
+" Airline symbols
 	let g:airline_left_sep = ''
 	let g:airline_left_alt_sep = ''
 	let g:airline_right_sep = ''
