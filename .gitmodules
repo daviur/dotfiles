@@ -2,13 +2,13 @@
 	path = .config/tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
 [submodule "/home/diurbina/.programs/fzf"]
-	path = /home/diurbina/.programs/fzf
+	path = .programs/fzf
 	url = https://github.com/junegunn/fzf.git
 [submodule "/home/diurbina/.programs/st"]
-	path = /home/diurbina/.programs/st
+	path = .programs/st
 	url = https://github.com/LukeSmithxyz/st.git
 [submodule "/home/diurbina/.programs/i3-gaps"]
-	path = /home/diurbina/.programs/i3-gaps
+	path = .programs/i3-gaps
 	url = https://github.com/Airblader/i3.git
 [submodule ".config/nvim"]
 	path = .config/nvim
