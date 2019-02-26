@@ -1,11 +1,10 @@
 # David's GNU/Linux Dotfiles
-
-These are my dotfiles!
+Forked from [Luke's GNU/Linux Dotfiles](https://github.com/LukeSmithxyz/voidrice)
 
 ## Programs whose configs can be found here
 
 + i3 (i3-gaps)
-+ Xresourses info used by [st build](https://github.com/lukesmithxyz/st) as a terminal
++ Xresourses info used by [Luke's](https://github.com/lukesmithxyz/st) as a terminal
 + vim
 + bash
 + ranger (see full documentation [here](.config/ranger/david_ranger_readme.md))
@@ -33,9 +32,6 @@ things to theses files my vimrc will automatically run `shortcuts` which will
 dynamically generate shortcuts for these in bash, ranger and optionally
 qutebrowser and fish.
 
-## Like my rice?
-
-Feel free to add other suggestions and I may implement them.
-
 # "Dependencies" and programs used
 
+TBD
