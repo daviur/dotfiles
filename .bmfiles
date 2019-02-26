@@ -6,7 +6,7 @@ cfr	~/.config/ranger/rc.conf
 cfi	~/.config/i3/config
 cfq	~/.config/qutebrowser/config.py
 cfm	~/.config/mutt/muttrc
-cft	~/.config/termite/config
+cft	~/.config/tmux/tmux.conf
 cfp	~/.config/polybar/config
 cfd	~/.Xdefaults
 cfA	~/.asoundrc
