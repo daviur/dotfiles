@@ -10,3 +10,6 @@
 [submodule "/home/diurbina/.programs/i3-gaps"]
 	path = /home/diurbina/.programs/i3-gaps
 	url = https://github.com/Airblader/i3.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:daviur/vimrc.git
