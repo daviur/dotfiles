@@ -36,7 +36,6 @@ alias gua="git remote | xargs -L1 git push --all"
 
 # Some aliases
 alias e="$EDITOR"
-alias p="sudo pacman"
 alias SS="sudo systemctl"
 alias v="$EDITOR"
 alias f="vifm"
@@ -49,7 +48,6 @@ alias mkd="mkdir -pv"
 alias ref="shortcuts >/dev/null ; source ~/.bashrc" # Refresh shortcuts manually and reload bashrc
 alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
 alias x="sxiv -ft *"
-alias lp="pacman -Qett --color=always | less"
 alias l="ls -l"
 alias ll="ls -al"
 # Needed to handle dotfiles
