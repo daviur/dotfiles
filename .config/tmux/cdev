@@ -1,0 +1,4 @@
+selectp -t 0			# Select pane 0
+send-keys '$EDITOR' Enter	# Open editor
+splitw -v -p 15 		# Split pane 0 horizontally by 25%
+selectp -t 0 			# Select pane 0
