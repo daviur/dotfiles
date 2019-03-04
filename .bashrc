@@ -22,10 +22,6 @@ if [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
 
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
-fi
-
 [ -f "$HOME/.shortcuts" ] && source "$HOME/.shortcuts" # Load shortcut aliases
 
 # System Maintainence
@@ -35,6 +31,7 @@ alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
 alias gua="git remote | xargs -L1 git push --all"
 
 # Some aliases
+alias update="sudo apt update;sudo apt upgrade -y;sudo apt autoremove -y;sudo apt autoclean; cr"
 alias e="$EDITOR"
 alias SS="sudo systemctl"
 alias v="$EDITOR"
@@ -68,7 +65,7 @@ shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
 vf() { fzf | xargs -r -I % $EDITOR % ;}
-
+cr() { [ -f /var/run/reboot-required ] && echo "Reboot required" ;}
 # Fuzzi File Search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -79,5 +76,5 @@ eval "$(pyenv virtualenv-init -)"
 
 # Check for reboot
 if [ -f /var/run/reboot-required ]; then
-  echo 'reboot required'
+  echo "Reboot required"
 fi
