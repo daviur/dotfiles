@@ -13,3 +13,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:daviur/vimrc.git
+[submodule ".config/tmux/tmux-gitbar"]
+	path = .config/tmux/tmux-gitbar
+	url = git@github.com:arl/tmux-gitbar.git
