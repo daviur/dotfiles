@@ -1,18 +1,15 @@
-[submodule ".tmux/plugins/tpm"]
-	path = .config/tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
-[submodule "/home/diurbina/.programs/fzf"]
+[submodule ".programs/fzf"]
 	path = .programs/fzf
 	url = https://github.com/junegunn/fzf.git
-[submodule "/home/diurbina/.programs/st"]
+[submodule ".programs/st"]
 	path = .programs/st
 	url = https://github.com/LukeSmithxyz/st.git
-[submodule "/home/diurbina/.programs/i3-gaps"]
+[submodule ".programs/i3-gaps"]
 	path = .programs/i3-gaps
 	url = https://github.com/Airblader/i3.git
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:daviur/vimrc.git
-[submodule ".config/tmux/tmux-gitbar"]
-	path = .config/tmux/tmux-gitbar
-	url = git@github.com:arl/tmux-gitbar.git
+[submodule ".config/tmux"]
+	path = .config/tmux
+	url = git@github.com:daviur/tmux.git
