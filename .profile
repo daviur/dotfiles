@@ -24,9 +24,8 @@ sudo -n loadkeys ~/.scripts/ttymaps.kmap 2>/dev/null
 [ ! $SSH_AGENT_PID ] && eval "$(ssh-agent -s)"
 ssh-add .ssh/id_rsa > /dev/null 2>&1
 
-if [ -f /var/run/reboot-required ]; then
-  echo 'reboot required'
-fi
+cr() { [ -f /var/run/reboot-required ] && echo "Reboot required" ;}
+cr
 
 # Start graphical server if i3 not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx

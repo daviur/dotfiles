@@ -35,7 +35,6 @@ alias update="sudo apt update;sudo apt upgrade -y;sudo apt autoremove -y;sudo ap
 alias e="$EDITOR"
 alias SS="sudo systemctl"
 alias v="$EDITOR"
-alias f="vifm"
 alias r="ranger"
 alias sr="sudo ranger"
 alias ka="killall"
@@ -65,7 +64,7 @@ shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
 vf() { fzf | xargs -r -I % $EDITOR % ;}
-cr() { [ -f /var/run/reboot-required ] && echo "Reboot required" ;}
+
 # Fuzzi File Search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -75,6 +74,4 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Check for reboot
-if [ -f /var/run/reboot-required ]; then
-  echo "Reboot required"
-fi
+cr
