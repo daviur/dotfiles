@@ -64,6 +64,7 @@ shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
 vf() { fzf | xargs -r -I % $EDITOR % ;}
+cr() { [ -f /var/run/reboot-required ] && echo "Reboot required" ;}
 
 # Fuzzi File Search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
