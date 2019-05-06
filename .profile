@@ -1,6 +1,9 @@
 #!/bin/bash
 # Profile file. Runs on login.
 
+SYSRESOURCES=/etc/X11/Xresources
+USRRESOURCES=$HOME/.Xresources
+
 # Adds `~/.scripts` and all subdirectories to $PATH
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 export EDITOR="nvim"
