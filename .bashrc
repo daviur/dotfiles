@@ -63,7 +63,7 @@ alias YT="youtube-viewer"
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
-vf() { fzf | xargs -r -I % $EDITOR % ;}
+vf() { fzf --no-mouse --reverse --multi --inline-info --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' | xargs -r -I % $EDITOR % ;}
 cr() { [ -f /var/run/reboot-required ] && echo "Reboot required" ;}
 
 # Fuzzi File Search
@@ -73,6 +73,9 @@ cr() { [ -f /var/run/reboot-required ] && echo "Reboot required" ;}
 export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# fd and bat
+export PATH="~/.cargo/bin:$PATH"
 
 # Check for reboot
 cr
