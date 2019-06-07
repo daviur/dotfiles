@@ -22,6 +22,11 @@ if [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
 
+# Set dir colors
+eval `dircolors ~/.dircolors`
+
+export BAT_THEME="Monokai Extended Origin"
+
 [ -f "$HOME/.shortcuts" ] && source "$HOME/.shortcuts" # Load shortcut aliases
 
 # System Maintainence
