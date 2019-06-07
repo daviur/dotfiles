@@ -1,6 +1,6 @@
-#define Font		Inconsolata-g
-#define Font_size	20
-#define Transparency	230
+#define Font		    Inconsolata-g
+#define Font_size	    18
+#define Transparency	250
 
 ! Solarized Theme
 ! Common
